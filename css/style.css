@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*
+## Colors
+
+###*/ 
+--Primary-Bright-orange: hsl(31, 77%, 52%);
+
+--Dark-cyan: hsl(184, 100%, 22%);
+
+--Very-dark-cyan: hsl(179, 100%, 13%);
+  
+/*### Neutral*/
+
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+; /*paragraph*/
+
+--Very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+ 
+ --fontLD: Lexend Deca;
+ --fontBSD: Big Shoulders Display;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 45%;
+  height: 55vh;
+}
+
+.sedans {
+  display:flex;
+  flex-direction: column;
+  background-color: var(--Primary-Bright-orange);
+  border-radius: 5px 0px 0px 5px;
+}
+.suvs {
+  display:flex;
+  flex-direction: column;
+  background-color: var(--Dark-cyan);
+}
+.luxury {
+  display:flex;
+  flex-direction: column;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.el {
+  flex-basis: 100%;
+}
+
+.img-icon {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 30px;
+}
+
+ img {
+  width: 50px;
+  height: 40px;
+}
+
+ h1 {
+  color: var(--Very-light-gray);
+  font-family: var(--fontBSD);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0px 30px;
+}
+
+ p {
+  color: var(--Transparent-white);
+  font-family: var(--fontLD);
+  font-weight: 400;
+  margin: 30px 30px;
+  font-size: 15px;
+}
+
+ a {
+  text-decoration: none;
+}
+.sedans a {
+   color:var(--Primary-Bright-orange);
+}
+
+.suvs a {
+   color:var(--Dark-cyan);
+}
+.luxury a {
+   color:var(--Very-dark-cyan);
+}
+
+.btn {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width: 45%;
+  height: 47px;
+  background-color: var(--Very-light-gray);
+  border-radius: 30px;
+  margin: 65px 30px;
+  font-family: var(--fontBSD);
+}
+
+footer {
+  text-align:center;
+  margin: 20px;
+  color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 1440px) and (min-width:375px){
+  .grid {
+    flex-direction: column;
+    width: 90%;
+  }
+  .sedans {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .luxury {
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 20px;
+    line-heigh: 3.59rem;
+  }
+  .btn {
+    width: 40%;
+  }
+   footer {
+     padding-top: 930px;
+  }
+}
